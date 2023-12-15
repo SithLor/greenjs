@@ -24,3 +24,5 @@ export default class KeyValue extends Id{
     }
 }
 
+const e = new KeyValue().toIdString();
+console.log(e)
