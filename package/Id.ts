@@ -9,3 +9,7 @@ export default class Id {
         return this.id;
     }
 }
+interface _Id {
+    id: `${string}-${string}-${string}-${string}-${string}`
+    toIdString(): `${string}-${string}-${string}-${string}-${string}`
+}

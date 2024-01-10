@@ -1,28 +1,20 @@
 import Id from "./Id";
 
-
-export default class KeyValue extends Id{
-    data:[]
-    constructor(){
+export class KeyValue extends Id {
+    constructor(public key: string, public value: string) {
         super();
-        this.data = []
     }
-    get(key:string){
-        this.data[key]
+    toString(): string {
+        return `${this.key}=${this.value}`;
     }
-    set(key:string,value:any){
-        this.data[key] = value;
+    setKey(key: string): void {
+        this.key = key;
     }
-    delete(key:string){
-        delete this.data[key]
+    setValue(value: string): void {
+        this.value = value;
     }
-    clear(){
-        this.data = []  
+    getKey(): string {
+        return this.key;
     }
-    has(key:string){
-        return this.data[key] ? true : false;
-    }
-}
 
-const e = new KeyValue().toIdString();
-console.log(e)
+}
